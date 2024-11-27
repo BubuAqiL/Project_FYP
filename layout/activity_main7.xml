@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF8E1"
+    android:padding="20dp">
+
+    <!-- Instruction Text -->
+    <TextView
+        android:id="@+id/instruction_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="#E4A7A7"
+        android:fontFamily="@font/font5"
+        android:text="Tap and match the number with pictures !!"
+        android:textColor="#333"
+        android:textSize="37sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Custom View for Drawing Lines -->
+    <com.example.kidlearn.CustomView
+        android:id="@+id/line_drawer"
+        android:layout_width="370dp"
+        android:layout_height="868dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:id="@+id/numbers_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/fruits_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/instruction_text"
+        app:layout_constraintVertical_bias="0.053">
+
+        <!-- Numbers, with draggable feature -->
+        <TextView
+            android:id="@+id/number_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/letter_bg"
+            android:padding="10dp"
+            android:tag="1"
+            android:text="1"
+            android:textColor="#000"
+            android:textSize="36sp" />
+
+        <TextView
+            android:id="@+id/number_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/letter_bg"
+            android:padding="10dp"
+            android:tag="2"
+            android:text="2"
+            android:textColor="#000"
+            android:textSize="36sp" />
+
+        <TextView
+            android:id="@+id/number_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/letter_bg"
+            android:padding="10dp"
+            android:tag="3"
+            android:text="3"
+            android:textColor="#000"
+            android:textSize="36sp" />
+
+        <TextView
+            android:id="@+id/number_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/letter_bg"
+            android:padding="10dp"
+            android:tag="4"
+            android:text="4"
+            android:textColor="#000"
+            android:textSize="36sp" />
+
+        <TextView
+            android:id="@+id/number_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/letter_bg"
+            android:padding="10dp"
+            android:tag="5"
+            android:text="5"
+            android:textColor="#000"
+            android:textSize="36sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fruits_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/numbers_container"
+        app:layout_constraintTop_toBottomOf="@id/instruction_text"
+        app:layout_constraintVertical_bias="0.157">
+
+        <!-- Fruit Images as droppable targets -->
+        <ImageView
+            android:id="@+id/fruit_grape"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="8dp"
+            android:contentDescription="Grape"
+            android:src="@drawable/bear4"
+            android:tag="grape" />
+
+        <ImageView
+            android:id="@+id/fruit_orange"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="8dp"
+            android:contentDescription="Orange"
+            android:src="@drawable/spon5"
+            android:tag="orange" />
+
+        <ImageView
+            android:id="@+id/fruit_cherry"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="8dp"
+            android:contentDescription="Cherry"
+            android:src="@drawable/box3"
+            android:tag="cherry" />
+
+        <ImageView
+            android:id="@+id/fruit_watermelon"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="8dp"
+            android:contentDescription="Watermelon"
+            android:src="@drawable/botol1"
+            android:tag="watermelon" />
+
+        <ImageView
+            android:id="@+id/fruit_pineapple"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="8dp"
+            android:contentDescription="Pineapple"
+            android:src="@drawable/pen2"
+            android:tag="pineapple" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.169"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_reset1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Play Again ?"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
